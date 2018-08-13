@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title Jade
+    body
+        p Hello
+        div
+            div= user
+            p
+                button#btn Get feach data from api/server
+            | Data from server:
+            pre#app
+        script.
+            document.querySelector('#btn')
+                .addEventListener('click', () => {
+                    fetch('/api/user')
+                        .then(r => r.json())
+                        .then(r => r.data)
+                        .then(user => {
+                            console.log('user:', user)
+                            document.querySelector('#app').innerHTML = JSON.stringify(user)
+                        })
+                        .catch(r => console.error)
+                })
