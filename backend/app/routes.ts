@@ -6,7 +6,7 @@ import * as Koa from 'koa'
 import {Middleware} from 'koa-compose'
 
 
-import errorCtrl from './ctrls/page/_errorCtrl'
+import errorCtrl from '@back/ctrls/page/_errorCtrl'
 
 export {errorCtrl}
 

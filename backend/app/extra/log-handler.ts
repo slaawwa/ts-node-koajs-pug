@@ -1,5 +1,6 @@
 
-import  * as Koa from 'koa'
+import * as Koa from 'koa'
+import cnf from '@root/_config'
 
 
 export default async (ctx: Koa.Context, next: any) => {
