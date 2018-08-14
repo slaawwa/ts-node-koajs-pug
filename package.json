@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "backend:server": "ts-node backend/app",
+    "backend:server": "ts-node -r tsconfig-paths/register backend/app",
     "backend:dev": "nodemon -w backend -e ts,tsx --exec npm run backend:server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,10 +12,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/glob": "^5.0.35",
     "@types/koa": "^2.0.46",
     "@types/koa-router": "^7.0.31",
     "@types/koa-static": "^4.0.0",
     "@types/koa-views": "^2.0.3",
+    "glob": "^7.1.2",
     "koa": "^2.5.2",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
@@ -24,6 +26,7 @@
     "nodemon": "^1.18.3",
     "pug": "^2.0.3",
     "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.5.0",
     "typescript": "^3.0.1"
   }
 }

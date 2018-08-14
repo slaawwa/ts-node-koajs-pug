@@ -3,7 +3,11 @@ html(lang='en')
     head
         meta(charset='utf-8')
         title Jade
-    body
+        style.
+            #bg {
+                background: url(/img/bg.jpg);
+            }
+    body#bg
         p Hello
         div
             div= user

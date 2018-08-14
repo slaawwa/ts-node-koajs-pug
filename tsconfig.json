@@ -1,9 +1,15 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "moduleResolution": "node",
         "target": "es2017",
         "noImplicitAny": true,
         "outDir": "./dist",
+        "baseUrl": ".",
+        "paths": {
+            "@root/*": [ "backend/../*" ],
+            "@back/*": [ "backend/*" ],
+            "@app/*": [ "backend/app/*" ]
+        },
         "sourceMap": true
     },
     "include": [
